@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements</title>
+</head>
+<body bgcolor="lightyellow">
+    
+    <form action="">
+        <fieldset>
+            <legend><h2>Enquiry</h2></legend>
+        Name: <input type="text" value="Aman" placeholder="Please enter your name here..."><hr>
+        Address: <textarea name="" id="" cols="30" rows="10" name="address" placeholder="Enter your address...">Saharanpur</textarea><hr>
+        Gender: 
+        <input type="radio" value="m" name="gender"> Male
+        <input type="radio" value="f" name="gender"> Female
+        <input type="radio" value="f" name="gender"> Others<hr>
+        Country:
+        <select name="" id="">
+            <optgroup label="Asia">
+                <option value="not selected">Select Country</option>
+                <option value="India">
+                    India
+                </option>
+                <option value="Singapore">
+                    Singapore
+                </option>
+                <option value="china">
+                    china
+                </option>
+            </optgroup>
+
+            <optgroup label="Europe">
+                <option value="Germany">
+                    Germany
+                </option>
+                <option value="Italy">
+                    Italy
+                </option>
+                <option value="United Kingdom">
+                    United Kingdom
+                </option>
+            </optgroup>
+
+            <optgroup label="North America">
+                <option value="United states">
+                    United states
+                </option>
+                <option value="Canada">
+                    Canada
+                </option>
+                <option value="Mexico">
+                    Mexico
+                </option>
+            </optgroup>
+            
+        </select><hr>
+        Hobbies:
+        <input type="checkbox" name="Hobbies[]">Dancing
+        <input type="checkbox" name="Hobbies[]">Singing
+        <input type="checkbox" name="Hobbies[]">Painting
+        <hr>
+        Image: <input type="file" name="image" id=""/>
+        <hr>
+        <input type="submit" value="Send"/>
+        <input type="reset" value="Reset"/>
+    </fieldset>
+    </form>
+</body>
+</html>
