@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS column</title>
+    <style>
+        .main{
+            height: 100px;
+            /* column-count: 3; */
+            column-width: 300px;
+            column-gap: 50px;
+            column-rule: 10px double red;
+            column-fill: auto;
+        }
+        .h2{
+            column-span: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2 class="h2">Hello Everyone</h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora sed tempore maxime quam nam laudantium quia perferendis quod harum culpa consequuntur qui, praesentium obcaecati nisi? Fuga tenetur accusamus explicabo facilis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora sed tempore maxime quam nam laudcing elit. Tempora sed tempore maxime quam nam laudantium quia perferendis quod harum culpa consequuntur qui, praesentium obcaecati nisi? Fuga tenetur accusamus explicabo facilis!
+    </div>
+</body>
+</html>
