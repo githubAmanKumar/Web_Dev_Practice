@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <div class="main">
+        <h2>Hello</h2>
+    </div>
+    <div class="main">
+        <h2>olleh</h2>
+    </div>
+    <script>
+        // x = document.getElementById('main').innerHTML="<h1>olleh</h1>";
+        // console.log(x);
+        var x = document.getElementsByClassName("main")[1].innerHTML;
+        alert(x);
+    </script>
+</body>
+</html>
