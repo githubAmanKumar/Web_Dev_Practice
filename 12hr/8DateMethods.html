@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date methods in js</title>
+</head>
+<body>
+    <h1 id="res"></h1>
+    <button onclick="getDate()">Date</button>
+    <button onclick="year()">Year</button>
+    <button onclick="month()">Month</button>
+    <button onclick="hours()">Hours</button>
+    <button onclick="toDate()">DATE</button>
+    <button onclick="day()">Day</button>
+    <button onclick="min()">Minutes</button>
+    <button onclick="time()">Time</button>
+    <button onclick="sec()">Seconds</button>
+</body>
+<script>
+    var date = new Date();
+    function getDate(){
+        document.getElementById("res").innerHTML=date;
+    }
+    function year(){
+        document.getElementById("res").innerHTML=date.getFullYear();
+    }
+    function month(){
+        var month =["Janauary","February","March","April","May","June","July","August","September","October","November","December"];
+        document.getElementById("res").innerHTML=month[date.getMonth()];
+    }
+    function hours(){
+        document.getElementById("res").innerHTML=date.getHours();
+    }
+    function toDate(){
+        document.getElementById("res").innerHTML=date.getDate();
+    }
+    function day(){
+        var day = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+        document.getElementById("res").innerHTML= day[date.getDay()];
+    }
+    function min(){
+        document.getElementById("res").innerHTML=date.getMinutes();
+    }
+    function sec(){
+        document.getElementById("res").innerHTML=date.getSeconds();
+    }
+    function time(){
+        document.getElementById("res").innerHTML=date.getTime() +" it will give time in milli seconds since jan-1-1970"; 
+    }
+</script>
+</html>
