@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HistoryObjectInJS</title>
+</head>
+<body>
+    <h1></h1>
+    <h2>First</h2>
+    <button onclick="window.history.forward();">Forward</button>
+    <button onclick="window.history.back();">Back</button>
+    <button onclick="window.history.go(3);">Go</button>
+    <!-- 
+        Length is 4
+        0 = first
+        1 = second
+        2 = third
+        3 = wscube tech
+     -->
+</body>
+<script>
+    var c = window.history.length;
+    document.getElementsByTagName("h1")[0].innerText = c;
+</script>
+</html>

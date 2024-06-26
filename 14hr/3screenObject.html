@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Object</title>
+</head>
+<body>
+    <button onclick="test()">Avl Height</button>
+    <button onclick="test1()">Height</button>
+    <button onclick="test2()">Avl Width</button>
+    <button onclick="test3()">Width</button>
+    <button onclick="test4()">Color depth</button>
+    <button onclick="test5()">Pixel depth</button>
+    <h1 id="print"></h1>
+</body>
+<script>
+    function test(){
+        var height = screen.availHeight+"px";
+        document.getElementById("print").innerHTML=height;
+    }
+    function test1(){
+        var height = screen.height+"px";
+        document.getElementById("print").innerHTML=height;
+    }
+    function test2(){
+        var height = screen.availWidth+"px";
+        document.getElementById("print").innerHTML=height;
+    }
+    function test3(){
+        var height = screen.width+"px";
+        document.getElementById("print").innerHTML=height;
+    }
+    function test4(){
+        var height = screen.colorDepth+"px";
+        document.getElementById("print").innerHTML=height;
+    }
+    function test5(){
+        var height = screen.pixelDepth+"px";
+        document.getElementById("print").innerHTML=height;
+    }
+    
+</script>
+</html>

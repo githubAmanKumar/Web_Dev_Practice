@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object</title>
+    <script>
+        // var x = Math.round(3.6);
+        // var x = Math.pow(2,0);
+        // var x = Math.sqrt(9);
+        // var x = Math.abs(-88);
+        // var x = Math.ceil(3.4);
+        // var x = Math.floor(5.8);
+        // var x = Math.min(88,6,0,-2);
+        //var x = Math.max(88,6,0,-2);
+        // var x = Math.random();
+        // document.write("<h1>"+x+"</h1>");
+        function getOtp(){
+            var x = Math.floor(Math.random() *10000); //for making otp we can use this logic
+            if(x<=1000){
+                x=x+"0";
+            }
+            document.getElementsByTagName("h1")[0].innerText=x;
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="getOtp()">OTP</button>
+    <h1></h1>
+</body>
+<script>
+
+</script>
+</html>
