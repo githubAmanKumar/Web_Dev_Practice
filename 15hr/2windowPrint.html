@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window.Print() in js</title>
+</head>
+<body id="body">
+    <img src="https://cdn.britannica.com/72/182872-050-914C987D/Hugh-Jackman-title-character-The-Wolverine-James.jpg" width="100%" alt="">
+    <h1>Printable Data Given Below</h1>
+    <p id="data">
+        
+        data:image/jpeg;base64,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</p>
+    <button onclick="printPage()">Print</button>
+</body>
+<script>
+    function printPage(){
+        
+        var body = document.getElementById("body").innerHTML;
+        var data = document.getElementById("data").innerHTML;
+        document.getElementById("body").innerHTML=data;
+        window.print();
+        document.getElementById("body").innerHTML =body;
+    }
+</script>
+</html>

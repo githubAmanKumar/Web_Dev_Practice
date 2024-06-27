@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeTableUsingUserInput</title>
+    <style>
+        div{
+            border-bottom: 1px solid #000;
+            width: 100px;
+            font-family: Verdana;
+        }
+    </style>
+</head>
+<body>
+</body>
+<script>
+    var num = prompt("Enter digit and get table","");
+    for( var i=1;i<11;i++){
+        document.write("<div>");
+        document.write(num+ " x " +i+ " = "+num*i);
+        document.write("</div>");
+        
+    }
+</script>
+</html>
