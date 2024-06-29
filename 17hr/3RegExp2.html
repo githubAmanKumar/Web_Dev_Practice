@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasswordPatternValidationUsingRegex()</title>
+    <style>
+        *{
+            font-family: Verdana;
+            background-color: rgb(56, 56, 63);
+        }
+        h1{
+            text-align: center;
+            background-color: white;
+            margin: 10px;
+        }
+        form{
+            width: 300px;
+            height: 480px;
+            margin: auto;
+            padding: 2%;
+            position: relative;
+            top: 80px;
+            background-color: white;
+            border-radius: 3px;
+        }
+        p{
+            background-color: white;
+            margin: 2px;
+        }
+        label{
+            background-color: white;
+            font-size: 16px;
+        }
+        input{
+            background-color: rgb(234, 229, 229);
+            width: 90%;
+            height: 25px;
+            border: 0px;
+            border-radius: 3px;
+            
+        }
+        #alert-caps{
+            color: red;
+            background: white;
+        }
+        #submit{
+            width: 80%;
+            font-size: 25px;
+            text-align: center;
+            height: 43px;
+            color: white;
+            background-color: rgb(54, 54, 218);
+            position: absolute;
+            bottom: 25px;
+            left: 10%;
+            margin: auto;
+            border-radius: 5px;
+        }
+        .password-check{
+            font-size: 13px;
+            font-style: italic;
+            display: flex; 
+            font-weight: bold;  
+            color: grey;   
+            margin: 5px;      
+        }
+        #hey{
+            position: absolute;
+            bottom: 85px;
+            left: 31px;
+        }
+    </style>
+</head>
+<body>
+    <form >
+        <h1>Make Your Account</h1>
+        <p>
+            <label>Username</label><br>
+            <input type="text" name="" id="" >
+        </p>
+        <p>
+            <label>Password</label><br>
+            <input type="password" name="" id="password" autocomplete="off" onkeyup="passCheck(this.value)">
+
+        </p>
+        <p>
+            <label>Confirm Password</label><br>
+            <input type="password" id="confirm_password" autocomplete="off" ><br>
+            <error id="alert-caps"></error>
+        </p>
+        <p>
+            <button type="submit" id="submit" value="SUBMIT">Submit</button>
+        </p>
+
+        <p id="hey">
+            <label class="password-check">8-characters</label>
+            <label class="password-check">1 Lower-case characters</label>
+            <label class="password-check">1 Upper-case characters</label>
+            <label class="password-check">1 Numerical characters</label>
+            <label class="password-check">1 Special characters</label>
+        </p>
+    </form>
+    
+</body>
+<script>
+    function passCheck(data){
+        var passClass = document.getElementsByClassName('password-check');
+        const eightChar = new RegExp('[a-zA-Z0-9]{8,}');
+        const lowerCase = new RegExp('(?=.*[a-z])');
+        const upperCase = new RegExp('(?=.*[A-Z])');
+        const number = new RegExp('(?=.*[0-9])');
+        const specialChar = new RegExp('(?=.*[!@#$%^&*])');
+        
+
+        if(eightChar.test(data)){
+            passClass[0].style.color='green';
+            passClass[0].style.scale='1.1';
+        }
+        else{
+            passClass[0].style.color='grey';
+            passClass[0].style.scale='1';
+        }
+        if(lowerCase.test(data)){
+            passClass[1].style.color='green';
+            passClass[1].style.scale='1.1';
+        }
+        else{
+            passClass[1].style.color='grey';
+            passClass[1].style.scale='1';
+        }
+        if(upperCase.test(data)){
+            passClass[2].style.color='green';
+            passClass[2].style.scale='1.1';
+        }
+        else{
+            passClass[2].style.color='grey';
+            passClass[2].style.scale='1';
+        }
+        if(number.test(data)){
+            passClass[3].style.color='green';
+            passClass[3].style.scale='1.1';
+        }
+        else{
+            passClass[3].style.color='grey';
+            passClass[3].style.scale='1';
+        }
+        if(specialChar.test(data)){
+            passClass[4].style.color='green';
+            passClass[4].style.scale='1.1';
+        }
+        else{
+            passClass[4].style.color='grey';
+            passClass[4].style.scale='1';
+        }
+    }
+</script>
+</html>

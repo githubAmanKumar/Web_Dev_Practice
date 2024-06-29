@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiteSpaceValidationUsingRegex()</title>
+    <style>
+        *{
+            font-family: Verdana;
+            background-color: rgb(56, 56, 63);
+        }
+        h1{
+            text-align: center;
+            background-color: white;
+        }
+        form{
+            width: 300px;
+            height: 400px;
+            margin: auto;
+            padding: 2%;
+            position: relative;
+            top: 100px;
+            background-color: white;
+            border-radius: 3px;
+        }
+        p{
+            background-color: white;
+        }
+        label{
+            background-color: white;
+        }
+        input{
+            background-color: rgb(234, 229, 229);
+            width: 90%;
+            height: 30px;
+            border: 0px;
+            border-radius: 3px;
+            
+        }
+        #alert-caps{
+            color: red;
+            background: white;
+        }
+        #submit{
+            width: 80%;
+            font-size: 25px;
+            text-align: center;
+            height: 60px;
+            color: white;
+            background-color: rgb(54, 54, 218);
+            position: absolute;
+            bottom: 25px;
+            left: 10%;
+            margin: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form >
+        <h1>Make Your Account</h1>
+        <p>
+            <label>Username</label><br>
+            <input type="text" name="" id="" onkeyup="white(this.value)">
+        </p>
+        <p>
+            <label>Password</label><br>
+            <input type="password" name="" id="password" onkeyup="white(this.value)">
+
+        </p>
+        <p>
+            <label>Confirm Password</label><br>
+            <input type="password" id="confirm_password" autocomplete="off" onkeyup="white(this.value)"><br>
+            <error id="alert-caps"></error>
+        </p>
+        <p>
+            <button type="submit" id="submit" value="SUBMIT">Submit</button>
+        </p>
+    </form>
+    
+</body>
+<script>
+   var pattern = /\s/g;
+   var alert=document.getElementById('alert-caps');
+   function white(data){
+    var isSpace = pattern.test(data);
+    if(isSpace){
+        alert.innerText = "Space is not allowed";
+    }
+    else{
+        alert.innerText = "";
+    }
+   }
+</script>
+</html>
