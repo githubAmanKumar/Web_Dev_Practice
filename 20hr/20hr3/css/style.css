@@ -1,0 +1,12 @@
+.header-top{
+    background: rgb(135, 135, 135);
+}
+.headertopin{
+    border: 2px solid rgb(255, 0, 0);
+}
+.colbg{
+    border: 2px solid rgb(255, 0, 0);
+}
+.table-data{
+    display: none;
+}
